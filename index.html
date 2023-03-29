@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script>
+        function displaySelectedTeaImage() {
+            const teaOptions = document.getElementById('teaOptions');
+            const selectedTea = teaOptions.value;
+            const imageElement = document.getElementById('selectedTeaImage');
+
+            const teaImages = {
+                green: "https://i.imgur.com/MGGJoBL.png",
+                black: "https://i.imgur.com/oQ1TDUD.png",
+                oolong: "https://i.imgur.com/ZUAaGaT.png",
+                white: "https://i.imgur.com/oJFHcm1.png"
+            };
+
+            imageElement.src = teaImages[selectedTea];
+        }
+    </script>
+</head>
+<body>
+<div class="title-container">
+    <div class="title-box">
+    <h1>Welcome to My Favortie Tea Homepage</h1>
+    </div>
+    <p>Drinking infusions of green, black, oolong and white tea is associated with many health benefits.<br><br>
+
+    Tea, especially green tea, is often said to be good for your health. Tea contains substances linked to a lower risk for heart disease, cancer, and diabetes.<br><br>
+
+    The main health-promoting substances in tea are polyphenols, in particular catechins and epicatechins. Lab and animal studies say these molecules have anti-inflammatory and antioxidant properties.
+    <a href="https://www.health.harvard.edu/press_releases/health-benefits-linked-to-drinking-tea">Harvard-led studies</a> of large groups of people over time have found that tea or coffee drinkers are at lower risk for diabetes and possibly cardiovascular disease.<br><br>
+    Discover the four most popular tea types, along with my personal favorite for each category.
+    </p>
+     <table>
+        <tr>
+            <th>Tea Type</th>
+            <th>Favorite Tea Name</th>
+            <th>Sample</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.simonlevelt.nl/thee/losse-thee?p=1&o=2&n=17&f=4147%7C4175">Green</a></td>
+            <td>Jasmine Tea</td>
+            <td><img src="https://i.imgur.com/MGGJoBL.png" alt="Green Tea" width="100"></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.simonlevelt.nl/thee/losse-thee?p=1&o=2&n=17&f=4152%7C4151">Black</a></td>
+            <td>Earl Grey</td>
+            <td><img src="https://i.imgur.com/oQ1TDUD.png" alt="Black Tea" width="100"></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.simonlevelt.nl/thee/losse-thee?p=1&o=2&n=17&f=4183">Oolong</a></td>
+            <td>Milky Oolong</td>
+            <td><img src="https://i.imgur.com/ZUAaGaT.png" alt="Oolong Tea" width="100"></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.simonlevelt.nl/detail/index/sArticle/1153%3Fc%3D">White</a></td>
+            <td>White Moonlight</td>
+            <td><img src="https://i.imgur.com/oJFHcm1.png" alt="White Tea" width="100"></td>
+        </tr>
+    </table>
+    <div class="title-container">
+    <div class="title-box">
+    <h2>My Recommendations</h2>
+    </div>
+    <p>Based on my extensive experience with tea, I'd like to share my top recommendations with you. Indulge in a soothing cup of tea any time of day and embrace the Zen moments it brings to your daily routine!</p>
+    </div>
+</div>
+    <ul>
+        <li><a href="https://www.simonlevelt.nl/detail/index/sArticle/1158%3Fc%3D">Yunan Flowery Orange Pekoe</a></li>
+        <li><a href="https://www.simonlevelt.nl/jasmine-spring?c=6">Jasmine Spring</a></li>
+        <li><a href="https://www.simonlevelt.nl/detail/index/sArticle/1153%3Fc%3D">White Moonlight</a></li>
+         </ul>
+
+    <!-- Input button -->
+    <input type="button" value="Visit Tea Website" onclick="window.open('https://www.simonlevelt.nl/thee/losse-thee', '_blank')">
+
+    <!-- Image selector -->
+    <input type="file" id="imageSelector" accept="image/*">
+
+    <!-- Option dropdown -->
+    <select id="teaOptions" onchange="displaySelectedTeaImage()">
+        <option value="green">Green Tea</option>
+        <option value="black">Black Tea</option>
+        <option value="oolong">Oolong Tea</option>
+        <option value="white">White Tea</option>
+    </select>
+
+    <!-- Image display -->
+    <img id="selectedTeaImage" alt="Selected Tea">
+
+</body>
+</html>
